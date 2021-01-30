@@ -1,30 +1,19 @@
-var numbers = [3, 15, 20, 30, 2, 4, 11, 12, 18, 25, 7, 10, 77, 55, 47, 42, 29];
-
 function fizzbuzz(number) {
-  var result = [];
-  if (number % 3 == 0) {
-    result.push(3);
-  }
-  if (number % 5 == 0) {
-    result.push(5);
-  }
-  if (number % 3 == 0 && number % 5 == 0) {
-    result.push(35);
-  }
-
   process.stdout.write(number + " ");
 
-  if (result.includes(35)) {
+  if (number % 15 == 0) {
     console.log("FizzBuzz");
-  } else if (result.includes(3) && !result.includes(5)) {
+  } else if (number % 3 == 0) {
     console.log("Fizz");
-  } else if (!result.includes(3) && result.includes(5)) {
+  } else if (number % 5 == 0) {
     console.log("Buzz");
   } else {
     console.log("Number is not divisible by 3 or 5");
   }
 }
 
-numbers.forEach((n) => {
-  fizzbuzz(n);
-});
+[3, 15, 20, 30, 2, 4, 11, 12, 18, 25, 7, 10, 77, 55, 47, 42, 29].forEach(
+  (n) => {
+    fizzbuzz(n);
+  }
+);
