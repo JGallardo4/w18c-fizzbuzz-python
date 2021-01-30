@@ -12,7 +12,7 @@ function fizzbuzz(number) {
     result.push(35);
   }
 
-  //   console.log(result);
+  process.stdout.write(number + " ");
 
   if (result.includes(35)) {
     console.log("FizzBuzz");
@@ -20,6 +20,8 @@ function fizzbuzz(number) {
     console.log("Fizz");
   } else if (!result.includes(3) && result.includes(5)) {
     console.log("Buzz");
+  } else {
+    console.log("Number is not divisible by 3 or 5");
   }
 }
 
